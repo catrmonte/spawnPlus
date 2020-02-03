@@ -39,14 +39,6 @@ public class FoodSpawner : MonoBehaviour
 
         factory = FactoryProducer.GetFactory(FactoryType.Fruit);
 
-        if (GameObject.Find("produce") != null)
-        {
-            Destroy(GameObject.Find("produce"));
-        } else
-        {
-            Debug.Log("Yo its null");
-        }
-
         if (requirements.green) // If it is a green fruit, spawn an avocado
         {
             GameObject produce = Instantiate(avocadoPrefab);
